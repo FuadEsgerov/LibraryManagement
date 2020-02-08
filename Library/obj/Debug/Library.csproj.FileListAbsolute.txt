@@ -1,0 +1,79 @@
+C:\Users\FuadRa\source\repos\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\WindowsFormsApp5.exe.config
+C:\Users\FuadRa\source\repos\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\WindowsFormsApp5.exe
+C:\Users\FuadRa\source\repos\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\WindowsFormsApp5.pdb
+C:\Users\FuadRa\source\repos\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\EntityFramework.dll
+C:\Users\FuadRa\source\repos\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\FuadRa\source\repos\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\EntityFramework.xml
+C:\Users\FuadRa\source\repos\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\FuadRa\source\repos\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\Library.csprojResolveAssemblyReference.cache
+C:\Users\FuadRa\source\repos\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.Properties.Resources.resources
+C:\Users\FuadRa\source\repos\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\Library.csproj.GenerateResource.Cache
+C:\Users\FuadRa\source\repos\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\Library.csproj.CoreCompileInputs.cache
+C:\Users\FuadRa\source\repos\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.exe
+C:\Users\FuadRa\source\repos\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.pdb
+C:\Users\FuadRa\source\repos\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.Forms.RegistrationForm.resources
+C:\Users\FuadRa\source\repos\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.Forms.LoginForm.resources
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\bin\Debug\WindowsFormsApp5.exe.config
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.exe
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.pdb
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\bin\Debug\WindowsFormsApp5.exe
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\bin\Debug\WindowsFormsApp5.pdb
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\bin\Debug\EntityFramework.dll
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\bin\Debug\mscorlib.dll
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\bin\Debug\EntityFramework.xml
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\bin\Debug\ru\mscorlib.resources.dll
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\bin\Debug\normidna.nlp
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\bin\Debug\normnfc.nlp
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\bin\Debug\normnfd.nlp
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\bin\Debug\normnfkc.nlp
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\bin\Debug\normnfkd.nlp
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\obj\Debug\Library.csprojResolveAssemblyReference.cache
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\obj\Debug\Library.csproj.GenerateResource.Cache
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\obj\Debug\Library.Forms.LoginForm.resources
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\obj\Debug\Library.Forms.RegistrationForm.resources
+C:\Users\Dell\Desktop\LibraryManagement\WindowsFormsApp5\obj\Debug\Library.Properties.Resources.resources
+C:\Users\Dell\Desktop\LibraryManagement\Library\bin\Debug\WindowsFormsApp5.exe.config
+C:\Users\Dell\Desktop\LibraryManagement\Library\obj\Debug\WindowsFormsApp5.exe
+C:\Users\Dell\Desktop\LibraryManagement\Library\obj\Debug\WindowsFormsApp5.pdb
+C:\Users\Dell\Desktop\LibraryManagement\Library\obj\Debug\Library.csprojResolveAssemblyReference.cache
+C:\Users\Dell\Desktop\LibraryManagement\Library\obj\Debug\Library.Forms.LoginForm.resources
+C:\Users\Dell\Desktop\LibraryManagement\Library\obj\Debug\Library.Forms.RegistrationForm.resources
+C:\Users\Dell\Desktop\LibraryManagement\Library\obj\Debug\Library.Properties.Resources.resources
+C:\Users\Dell\Desktop\LibraryManagement\Library\obj\Debug\Library.csproj.GenerateResource.Cache
+C:\Users\Dell\Desktop\LibraryManagement\Library\bin\Debug\WindowsFormsApp5.exe
+C:\Users\Dell\Desktop\LibraryManagement\Library\bin\Debug\WindowsFormsApp5.pdb
+C:\Users\Dell\Desktop\LibraryManagement\Library\bin\Debug\EntityFramework.dll
+C:\Users\Dell\Desktop\LibraryManagement\Library\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dell\Desktop\LibraryManagement\Library\bin\Debug\mscorlib.dll
+C:\Users\Dell\Desktop\LibraryManagement\Library\bin\Debug\EntityFramework.xml
+C:\Users\Dell\Desktop\LibraryManagement\Library\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dell\Desktop\LibraryManagement\Library\bin\Debug\ru\mscorlib.resources.dll
+C:\Users\Dell\Desktop\LibraryManagement\Library\bin\Debug\normidna.nlp
+C:\Users\Dell\Desktop\LibraryManagement\Library\bin\Debug\normnfc.nlp
+C:\Users\Dell\Desktop\LibraryManagement\Library\bin\Debug\normnfd.nlp
+C:\Users\Dell\Desktop\LibraryManagement\Library\bin\Debug\normnfkc.nlp
+C:\Users\Dell\Desktop\LibraryManagement\Library\bin\Debug\normnfkd.nlp
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\bin\Debug\WindowsFormsApp5.exe.config
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\obj\Debug\WindowsFormsApp5.exe
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\obj\Debug\WindowsFormsApp5.pdb
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\bin\Debug\WindowsFormsApp5.exe
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\bin\Debug\WindowsFormsApp5.pdb
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\bin\Debug\EntityFramework.dll
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\bin\Debug\mscorlib.dll
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\bin\Debug\EntityFramework.xml
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\bin\Debug\ru\mscorlib.resources.dll
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\bin\Debug\normidna.nlp
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\bin\Debug\normnfc.nlp
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\bin\Debug\normnfd.nlp
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\bin\Debug\normnfkc.nlp
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\bin\Debug\normnfkd.nlp
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\obj\Debug\Library.csprojResolveAssemblyReference.cache
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\obj\Debug\Library.Forms.DashboardForm.resources
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\obj\Debug\Library.Forms.LoginForm.resources
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\obj\Debug\Library.Forms.RegistrationForm.resources
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\obj\Debug\Library.Properties.Resources.resources
+C:\Users\Dell\Desktop\Last versionLibraryManagement\Library\obj\Debug\Library.csproj.GenerateResource.Cache
