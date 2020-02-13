@@ -7,13 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Library.Models;
+using Library.Forms;
+using Library.Data;
+
 
 namespace Library.Forms
 {
     public partial class RegistrationForm : Form
     {
+        private readonly LibraryContext _context;
         public RegistrationForm()
         {
+            _context = new LibraryContext();
             InitializeComponent();
         }
 
@@ -22,26 +28,18 @@ namespace Library.Forms
             panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
         }
 
-        private void FormClosed_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Close();
-        }
+      
 
         private void BtnRegistration_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(TxtRegName.Text))
+            if (string.IsNullOrEmpty(TxtRegFullname.Text))
             {
-                MessageBox.Show("Adınızı yazın");
+                MessageBox.Show("Adınızı ve Soyadınızı yazın");
                 return;
             }
-            if (string.IsNullOrEmpty(TxtRegSurname.Text))
+            if (string.IsNullOrEmpty(TxtRegUsername.Text))
             {
-                MessageBox.Show("Soyadınızı yazın");
-                return;
-            }
-            if (string.IsNullOrEmpty(TxtPhone.Text))
-            {
-                MessageBox.Show("Telefon nömrənizi yazın");
+                MessageBox.Show("Username yazın");
                 return;
             }
             if (string.IsNullOrEmpty(TxtRegEmail.Text))
@@ -55,20 +53,38 @@ namespace Library.Forms
                 MessageBox.Show("Şifrə yazın");
                 return;
             }
+            if (string.IsNullOrEmpty(comboBoxUsertype.Text))
+            {
+                MessageBox.Show("Level secin");
+                return;
+            }
+            if (comboBoxUsertype.Text == "Admin" || comboBoxUsertype.Text == "Moderator")
+            {
+                Models.User user = new Models.User()
+                {
+                    Fullname = TxtRegFullname.Text,
+                    Username = TxtRegUsername.Text,
+                    Email = TxtRegEmail.Text,
+                    Password = TxtRegPassword.Text,
+                    Level = (comboBoxUsertype.Text == "Admin") ? UserLevel.Admin : UserLevel.Moderator,
+                    Status = true
+                };
+                _context.User.Add(user);
+                _context.SaveChanges();
+                MessageBox.Show("Qeydiyyat ugurla aparildi");
+            }
+            else
+            {
+                MessageBox.Show("Level Duzgun Secilmeyib");
+                return;
+            }
 
-            //User user = _context.Users.FirstOrDefault(u => u.Status && u.Email == TxtEmail.Text && u.Password == TxtPassword.Text);
+     
+            this.Close();
+        }
 
-            //if(user!=null)
-            //{
-            //    DashboardForm dashboard = new DashboardForm();
-            //    dashboard.User = user;
-
-            //    dashboard.Show();
-
-            //    this.Hide();
-            //    return;
-            //}
-            MessageBox.Show("Qeydiyyatdan uğurla keçdiniz");
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
 

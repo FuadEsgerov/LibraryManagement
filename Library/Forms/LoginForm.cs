@@ -7,19 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using Library.Data;
-//using Library.Models;
+using Library.Data;
+using Library.Forms;
+using Library.Models;
 
 
 namespace Library.Forms
 {
     public partial class LoginForm : Form
     {
+        private readonly LibraryContext _context;
         public LoginForm()
         {
+            _context = new LibraryContext();
             InitializeComponent();
         }
-
+        RegistrationForm frm2 = new RegistrationForm();
         private void LoginForm_Load(object sender, EventArgs e)
         {
             panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
@@ -49,11 +52,7 @@ namespace Library.Forms
             }
         }
 
-        private void FormClosed_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Close();
-        }
-
+   
       
 
         private void BtnLogin_Click(object sender, EventArgs e)
@@ -70,20 +69,24 @@ namespace Library.Forms
                     MessageBox.Show("Şifrə yazın");
                     return;
                 }
-                //User user = _context.Users.FirstOrDefault(u => u.Status && u.Email == TxtEmail.Text && u.Password == TxtPassword.Text);
+            User user = _context.User.FirstOrDefault(u => u.Status && u.Email == TxtEmail.Text && u.Password == TxtPassword.Text);
 
-                //if(user!=null)
-                //{
-                //    DashboardForm dashboard = new DashboardForm();
-                //    dashboard.User = user;
+            if (user != null)
+            {
+                Dashboard dashboard = new Dashboard();
+                dashboard.Show();
 
-                //    dashboard.Show();
 
-                //    this.Hide();
-                //    return;
-                //}
-                MessageBox.Show("E-poçt və ya şifrə yalnışdır");
+
+                return;
             }
+            MessageBox.Show("E-poçt və ya şifrə yalnışdır");
+            }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         }
     }
 

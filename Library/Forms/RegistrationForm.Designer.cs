@@ -34,13 +34,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.BtnRegistration = new System.Windows.Forms.Button();
             this.TxtRegEmail = new System.Windows.Forms.TextBox();
-            this.TxtRegName = new System.Windows.Forms.TextBox();
-            this.TxtRegSurname = new System.Windows.Forms.TextBox();
+            this.TxtRegFullname = new System.Windows.Forms.TextBox();
+            this.TxtRegUsername = new System.Windows.Forms.TextBox();
             this.TxtRegPassword = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.BtnClose = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.FormClosed = new System.Windows.Forms.LinkLabel();
-            this.TxtPhone = new System.Windows.Forms.TextBox();
+            this.comboBoxUsertype = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -48,21 +48,21 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.comboBoxUsertype);
             this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.BtnRegistration);
-            this.panel1.Controls.Add(this.TxtPhone);
             this.panel1.Controls.Add(this.TxtRegEmail);
-            this.panel1.Controls.Add(this.TxtRegName);
-            this.panel1.Controls.Add(this.TxtRegSurname);
+            this.panel1.Controls.Add(this.TxtRegFullname);
+            this.panel1.Controls.Add(this.TxtRegUsername);
             this.panel1.Controls.Add(this.TxtRegPassword);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(174, 53);
+            this.panel1.Location = new System.Drawing.Point(144, 38);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(350, 410);
+            this.panel1.Size = new System.Drawing.Size(395, 425);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -83,7 +83,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(7, 205);
+            this.label4.Location = new System.Drawing.Point(7, 162);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 28);
             this.label4.TabIndex = 19;
@@ -95,7 +95,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(7, 243);
+            this.label3.Location = new System.Drawing.Point(10, 202);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 28);
             this.label3.TabIndex = 19;
@@ -107,7 +107,7 @@
             this.BtnRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRegistration.Font = new System.Drawing.Font("Segoe Script", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRegistration.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnRegistration.Location = new System.Drawing.Point(104, 324);
+            this.BtnRegistration.Location = new System.Drawing.Point(122, 323);
             this.BtnRegistration.Name = "BtnRegistration";
             this.BtnRegistration.Size = new System.Drawing.Size(172, 43);
             this.BtnRegistration.TabIndex = 17;
@@ -119,49 +119,63 @@
             // 
             this.TxtRegEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtRegEmail.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtRegEmail.Location = new System.Drawing.Point(104, 167);
+            this.TxtRegEmail.Location = new System.Drawing.Point(145, 162);
             this.TxtRegEmail.Name = "TxtRegEmail";
             this.TxtRegEmail.Size = new System.Drawing.Size(165, 23);
             this.TxtRegEmail.TabIndex = 16;
             // 
-            // TxtRegName
+            // TxtRegFullname
             // 
-            this.TxtRegName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtRegName.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtRegName.Location = new System.Drawing.Point(104, 87);
-            this.TxtRegName.Name = "TxtRegName";
-            this.TxtRegName.Size = new System.Drawing.Size(165, 23);
-            this.TxtRegName.TabIndex = 15;
+            this.TxtRegFullname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtRegFullname.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtRegFullname.Location = new System.Drawing.Point(145, 82);
+            this.TxtRegFullname.Name = "TxtRegFullname";
+            this.TxtRegFullname.Size = new System.Drawing.Size(165, 23);
+            this.TxtRegFullname.TabIndex = 15;
             // 
-            // TxtRegSurname
+            // TxtRegUsername
             // 
-            this.TxtRegSurname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtRegSurname.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtRegSurname.Location = new System.Drawing.Point(104, 127);
-            this.TxtRegSurname.Name = "TxtRegSurname";
-            this.TxtRegSurname.Size = new System.Drawing.Size(165, 23);
-            this.TxtRegSurname.TabIndex = 15;
+            this.TxtRegUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtRegUsername.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtRegUsername.Location = new System.Drawing.Point(145, 122);
+            this.TxtRegUsername.Name = "TxtRegUsername";
+            this.TxtRegUsername.Size = new System.Drawing.Size(165, 23);
+            this.TxtRegUsername.TabIndex = 15;
             // 
             // TxtRegPassword
             // 
             this.TxtRegPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtRegPassword.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtRegPassword.Location = new System.Drawing.Point(104, 248);
+            this.TxtRegPassword.Location = new System.Drawing.Point(145, 207);
             this.TxtRegPassword.Name = "TxtRegPassword";
             this.TxtRegPassword.Size = new System.Drawing.Size(165, 23);
             this.TxtRegPassword.TabIndex = 16;
             // 
-            // label6
+            // BtnClose
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(7, 87);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 28);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Name";
+            this.BtnClose.BackColor = System.Drawing.Color.Transparent;
+            this.BtnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnClose.Location = new System.Drawing.Point(663, 12);
+            this.BtnClose.Name = "BtnClose";
+            this.BtnClose.Size = new System.Drawing.Size(25, 25);
+            this.BtnClose.TabIndex = 2;
+            this.BtnClose.Text = "X";
+            this.BtnClose.UseVisualStyleBackColor = false;
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(7, 82);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 28);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Fullname";
             // 
             // label5
             // 
@@ -169,50 +183,35 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(7, 126);
+            this.label5.Location = new System.Drawing.Point(7, 122);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 28);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Surname";
+            this.label5.Size = new System.Drawing.Size(91, 28);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Username";
             // 
-            // FormClosed
+            // comboBoxUsertype
             // 
-            this.FormClosed.ActiveLinkColor = System.Drawing.Color.WhiteSmoke;
-            this.FormClosed.AutoSize = true;
-            this.FormClosed.BackColor = System.Drawing.Color.Transparent;
-            this.FormClosed.DisabledLinkColor = System.Drawing.Color.Transparent;
-            this.FormClosed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FormClosed.LinkColor = System.Drawing.Color.White;
-            this.FormClosed.Location = new System.Drawing.Point(667, 9);
-            this.FormClosed.Name = "FormClosed";
-            this.FormClosed.Size = new System.Drawing.Size(21, 20);
-            this.FormClosed.TabIndex = 2;
-            this.FormClosed.TabStop = true;
-            this.FormClosed.Text = "X";
-            this.FormClosed.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.FormClosed.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.FormClosed_LinkClicked);
-            // 
-            // TxtPhone
-            // 
-            this.TxtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtPhone.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPhone.Location = new System.Drawing.Point(104, 210);
-            this.TxtPhone.Name = "TxtPhone";
-            this.TxtPhone.Size = new System.Drawing.Size(165, 23);
-            this.TxtPhone.TabIndex = 16;
-          
+            this.comboBoxUsertype.Font = new System.Drawing.Font("Segoe Print", 8.5F);
+            this.comboBoxUsertype.FormattingEnabled = true;
+            this.comboBoxUsertype.Items.AddRange(new object[] {
+            "Moderator",
+            "Admin"});
+            this.comboBoxUsertype.Location = new System.Drawing.Point(143, 252);
+            this.comboBoxUsertype.Name = "comboBoxUsertype";
+            this.comboBoxUsertype.Size = new System.Drawing.Size(167, 27);
+            this.comboBoxUsertype.TabIndex = 24;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(7, 162);
+            this.label2.Location = new System.Drawing.Point(8, 256);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 28);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Phone ";
+            this.label2.Size = new System.Drawing.Size(121, 23);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Select User Type";
             // 
             // RegistrationForm
             // 
@@ -221,17 +220,17 @@
             this.BackgroundImage = global::Library.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(700, 500);
-            this.Controls.Add(this.FormClosed);
+            this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegistrationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrationForm";
             this.Load += new System.EventHandler(this.RegistrationForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -242,14 +241,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BtnRegistration;
-        private System.Windows.Forms.TextBox TxtRegEmail;
         private System.Windows.Forms.TextBox TxtRegPassword;
-        private System.Windows.Forms.TextBox TxtRegName;
-        private System.Windows.Forms.TextBox TxtRegSurname;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.LinkLabel FormClosed;
+        private System.Windows.Forms.TextBox TxtRegFullname;
+        private System.Windows.Forms.TextBox TxtRegUsername;
+        private System.Windows.Forms.TextBox TxtRegEmail;
+        private System.Windows.Forms.Button BtnClose;
+        private System.Windows.Forms.ComboBox comboBoxUsertype;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TxtPhone;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
     }
 }

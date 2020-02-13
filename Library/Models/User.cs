@@ -4,33 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 
 namespace Library.Models
 {
     public enum UserLevel
     {
         Admin,
-        User
+        Moderator
     }
-   public  class User
+    public class User
     {
         [Key]
         public int UserID { get; set; }
-     
-       [Required]
+
+        [Required]
         public bool Status { get; set; }
-      
-       [Required]
-        [MaxLength(50)]
-        public string Name { get; set; }
-
         [Required]
         [MaxLength(50)]
-        public string Surname { get; set; }
 
+        public string Fullname { get; set; }
         [Required]
         [MaxLength(50)]
-        public string Phone { get; set; }
+        public string Username { get; set; }
 
         [Required]
         [MaxLength(50)]

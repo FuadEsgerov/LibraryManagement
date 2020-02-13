@@ -10,15 +10,16 @@ namespace Library.Data
 {
     class LibraryContext :DbContext
     {
-         public LibraryContext() : base(@"Server=DELL-PC\SQLEXPRESS;Database=LibraryManagement;Trusted_Connection=True;")
+         public LibraryContext() : base("LibraryContext")
         {
             
 
         }
-         public DbSet<Book> Books { get; set; }
-         public DbSet<User> Users { get; set; }
-         public DbSet<Management> Managements { get; set; }
+        public DbSet<User> User { get; set; }
+    public DbSet<Book> Book { get; set; }
+   public DbSet<Person> Person { get; set; }
+      public DbSet<Management> Management { get; set; }
 
-         public DbSet<Purchase> Purchases { get; set; }
+    public DbSet<Purchase> Purchase { get; set; }
     }
 }

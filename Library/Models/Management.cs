@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 
 
 namespace Library.Models
@@ -14,7 +15,7 @@ namespace Library.Models
         public int OrderID { get; set; }
 
         [Required]
-        public User User { get; set; }
+        public Person Person { get; set; }
 
         [Required]
         public Book Book { get; set; }

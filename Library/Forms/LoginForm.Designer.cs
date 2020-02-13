@@ -36,7 +36,7 @@
             this.TxtEmail = new System.Windows.Forms.TextBox();
             this.TxtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.FormClosed = new System.Windows.Forms.LinkLabel();
+            this.BtnClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,22 +139,19 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "E-Mail";
             // 
-            // FormClosed
+            // BtnClose
             // 
-            this.FormClosed.ActiveLinkColor = System.Drawing.Color.WhiteSmoke;
-            this.FormClosed.AutoSize = true;
-            this.FormClosed.BackColor = System.Drawing.Color.Transparent;
-            this.FormClosed.DisabledLinkColor = System.Drawing.Color.Transparent;
-            this.FormClosed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FormClosed.LinkColor = System.Drawing.Color.White;
-            this.FormClosed.Location = new System.Drawing.Point(667, 9);
-            this.FormClosed.Name = "FormClosed";
-            this.FormClosed.Size = new System.Drawing.Size(21, 20);
-            this.FormClosed.TabIndex = 1;
-            this.FormClosed.TabStop = true;
-            this.FormClosed.Text = "X";
-            this.FormClosed.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.FormClosed.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.FormClosed_LinkClicked);
+            this.BtnClose.BackColor = System.Drawing.Color.Transparent;
+            this.BtnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnClose.Location = new System.Drawing.Point(663, 12);
+            this.BtnClose.Name = "BtnClose";
+            this.BtnClose.Size = new System.Drawing.Size(25, 25);
+            this.BtnClose.TabIndex = 1;
+            this.BtnClose.Text = "X";
+            this.BtnClose.UseVisualStyleBackColor = false;
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // LoginForm
             // 
@@ -163,19 +160,18 @@
             this.BackgroundImage = global::Library.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(700, 500);
-            this.Controls.Add(this.FormClosed);
+            this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -189,6 +185,6 @@
         private System.Windows.Forms.LinkLabel ToRegister;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel FormClosed;
+        private System.Windows.Forms.Button BtnClose;
     }
 }
