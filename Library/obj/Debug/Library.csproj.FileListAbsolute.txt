@@ -171,3 +171,27 @@ C:\Users\FuadRa\Desktop\New folder\LibraryManagement-master\Library\obj\Debug\Li
 C:\Users\FuadRa\Desktop\New folder\LibraryManagement-master\Library\obj\Debug\WindowsFormsApp5.exe
 C:\Users\FuadRa\Desktop\New folder\LibraryManagement-master\Library\obj\Debug\WindowsFormsApp5.pdb
 C:\Users\FuadRa\Desktop\New folder\LibraryManagement-master\Library\bin\Debug\System.Xml.ReaderWriter.dll
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\bin\Debug\WindowsFormsApp5.exe.config
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\bin\Debug\WindowsFormsApp5.exe
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\bin\Debug\WindowsFormsApp5.pdb
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\bin\Debug\EntityFramework.dll
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\bin\Debug\System.Xml.ReaderWriter.dll
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\bin\Debug\EntityFramework.xml
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\obj\Debug\Library.csprojAssemblyReference.cache
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\obj\Debug\Library.Forms.AdminDasboard.resources
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\obj\Debug\Library.Forms.Dashboard.resources
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\obj\Debug\Library.Forms.LoginForm.resources
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\obj\Debug\Library.Forms.RegistrationForm.resources
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\obj\Debug\Library.Forms.ReturnsForm.resources
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\obj\Debug\Library.Forms.PersonForm.resources
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\obj\Debug\Library.Migrations.bookandmanagementandpersonandpurchaseandusercreated.resources
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\obj\Debug\Library.Properties.Resources.resources
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\obj\Debug\Library.csproj.GenerateResource.cache
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\obj\Debug\Library.csproj.CoreCompileInputs.cache
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\obj\Debug\Library.csproj.CopyComplete
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\obj\Debug\WindowsFormsApp5.exe
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\obj\Debug\WindowsFormsApp5.pdb
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\obj\Debug\Library.Forms.BookForm.resources
+C:\Users\FuadRa\Desktop\LibraryManagement\Library\obj\Debug\Library.Forms.BookStoreForm.resources

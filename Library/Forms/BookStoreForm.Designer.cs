@@ -1,6 +1,6 @@
 ﻿namespace Library.Forms
 {
-    partial class BookStore
+    partial class BookStoreForm
     {
         /// <summary>
         /// Required designer variable.

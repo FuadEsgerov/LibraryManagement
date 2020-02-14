@@ -14,7 +14,7 @@ namespace Library.Forms
     {
         private Form activeForm;
 
-        public PersonForm User { get; internal set; }
+        public PersonForm Person { get; internal set; }
 
         public Dashboard()
         {
@@ -58,12 +58,12 @@ namespace Library.Forms
 
         private void BtnBook_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Book(), sender);
+            OpenChildForm(new Forms.BookForm(), sender);
         }
 
         private void BtnStore_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.BookStore(), sender);
+            OpenChildForm(new Forms.BookStoreForm(), sender);
         }
 
         private void BtnReturn_Click(object sender, EventArgs e)
