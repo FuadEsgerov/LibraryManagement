@@ -8,7 +8,7 @@ using System.Data.Entity;
 
 namespace Library.Data
 {
-    class LibraryContext :DbContext
+    public class LibraryContext :DbContext
     {
          public LibraryContext() : base("LibraryContext")
         {
@@ -16,10 +16,10 @@ namespace Library.Data
 
         }
         public DbSet<User> User { get; set; }
-    public DbSet<Book> Book { get; set; }
-   public DbSet<Person> Person { get; set; }
-      public DbSet<Management> Management { get; set; }
+        public DbSet<Book> Book { get; set; }
+        public DbSet<Person> Person { get; set; }
+        public DbSet<Management> Management { get; set; }
 
-    public DbSet<Purchase> Purchase { get; set; }
+         public DbSet<Purchase> Purchase { get; set; }
     }
 }

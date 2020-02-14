@@ -28,36 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DgvUserCrud = new System.Windows.Forms.DataGridView();
+            this.components = new System.ComponentModel.Container();
             this.BtnUpdate = new System.Windows.Forms.Button();
             this.BtnAdd = new System.Windows.Forms.Button();
             this.TbPhonenumber = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TbEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.Surname = new System.Windows.Forms.TextBox();
+            this.TbSurname = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TbName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.BtnDelete = new System.Windows.Forms.Button();
+            this.DgvUserCrud = new System.Windows.Forms.DataGridView();
+            this.personIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.peopleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSet1 = new Library.DataSet1();
+            this.peopleTableAdapter = new Library.DataSet1TableAdapters.PeopleTableAdapter();
+            this.label6 = new System.Windows.Forms.Label();
             this.TbPersonID = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUserCrud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peopleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DgvUserCrud
-            // 
-            this.DgvUserCrud.AllowUserToAddRows = false;
-            this.DgvUserCrud.AllowUserToDeleteRows = false;
-            this.DgvUserCrud.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvUserCrud.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvUserCrud.Location = new System.Drawing.Point(266, 85);
-            this.DgvUserCrud.Margin = new System.Windows.Forms.Padding(2);
-            this.DgvUserCrud.Name = "DgvUserCrud";
-            this.DgvUserCrud.ReadOnly = true;
-            this.DgvUserCrud.RowHeadersWidth = 51;
-            this.DgvUserCrud.RowTemplate.Height = 24;
-            this.DgvUserCrud.Size = new System.Drawing.Size(560, 373);
-            this.DgvUserCrud.TabIndex = 26;
             // 
             // BtnUpdate
             // 
@@ -68,6 +66,7 @@
             this.BtnUpdate.TabIndex = 25;
             this.BtnUpdate.Text = "Update";
             this.BtnUpdate.UseVisualStyleBackColor = true;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // BtnAdd
             // 
@@ -78,6 +77,7 @@
             this.BtnAdd.TabIndex = 24;
             this.BtnAdd.Text = "Add";
             this.BtnAdd.UseVisualStyleBackColor = true;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // TbPhonenumber
             // 
@@ -115,13 +115,13 @@
             this.label3.TabIndex = 20;
             this.label3.Text = "Email:";
             // 
-            // Surname
+            // TbSurname
             // 
-            this.Surname.Location = new System.Drawing.Point(59, 220);
-            this.Surname.Margin = new System.Windows.Forms.Padding(2);
-            this.Surname.Name = "Surname";
-            this.Surname.Size = new System.Drawing.Size(98, 20);
-            this.Surname.TabIndex = 19;
+            this.TbSurname.Location = new System.Drawing.Point(59, 220);
+            this.TbSurname.Margin = new System.Windows.Forms.Padding(2);
+            this.TbSurname.Name = "TbSurname";
+            this.TbSurname.Size = new System.Drawing.Size(98, 20);
+            this.TbSurname.TabIndex = 19;
             // 
             // label4
             // 
@@ -151,23 +151,116 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Name:";
             // 
+            // BtnDelete
+            // 
+            this.BtnDelete.Location = new System.Drawing.Point(150, 421);
+            this.BtnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Size = new System.Drawing.Size(78, 37);
+            this.BtnDelete.TabIndex = 27;
+            this.BtnDelete.Text = "Delete";
+            this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+            // 
+            // DgvUserCrud
+            // 
+            this.DgvUserCrud.AllowUserToAddRows = false;
+            this.DgvUserCrud.AllowUserToDeleteRows = false;
+            this.DgvUserCrud.AutoGenerateColumns = false;
+            this.DgvUserCrud.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvUserCrud.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvUserCrud.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.personIDDataGridViewTextBoxColumn,
+            this.statusDataGridViewCheckBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.surnameDataGridViewTextBoxColumn,
+            this.phoneDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn});
+            this.DgvUserCrud.DataSource = this.peopleBindingSource;
+            this.DgvUserCrud.Location = new System.Drawing.Point(273, 85);
+            this.DgvUserCrud.Margin = new System.Windows.Forms.Padding(2);
+            this.DgvUserCrud.Name = "DgvUserCrud";
+            this.DgvUserCrud.ReadOnly = true;
+            this.DgvUserCrud.RowHeadersWidth = 51;
+            this.DgvUserCrud.RowTemplate.Height = 24;
+            this.DgvUserCrud.Size = new System.Drawing.Size(560, 373);
+            this.DgvUserCrud.TabIndex = 28;
+            this.DgvUserCrud.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvUserCrud_RowHeaderMouseDoubleClick);
+            // 
+            // personIDDataGridViewTextBoxColumn
+            // 
+            this.personIDDataGridViewTextBoxColumn.DataPropertyName = "PersonID";
+            this.personIDDataGridViewTextBoxColumn.HeaderText = "PersonID";
+            this.personIDDataGridViewTextBoxColumn.Name = "personIDDataGridViewTextBoxColumn";
+            this.personIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDataGridViewCheckBoxColumn
+            // 
+            this.statusDataGridViewCheckBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewCheckBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewCheckBoxColumn.Name = "statusDataGridViewCheckBoxColumn";
+            this.statusDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.statusDataGridViewCheckBoxColumn.Visible = false;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // surnameDataGridViewTextBoxColumn
+            // 
+            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
+            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // phoneDataGridViewTextBoxColumn
+            // 
+            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
+            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // peopleBindingSource
+            // 
+            this.peopleBindingSource.DataMember = "People";
+            this.peopleBindingSource.DataSource = this.DataSet1;
+            // 
+            // DataSet1
+            // 
+            this.DataSet1.DataSetName = "DataSet1";
+            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // peopleTableAdapter
+            // 
+            this.peopleTableAdapter.ClearBeforeFill = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(56, 85);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "PersonID:";
+            // 
             // TbPersonID
             // 
-            this.TbPersonID.Location = new System.Drawing.Point(59, 109);
+            this.TbPersonID.Location = new System.Drawing.Point(59, 112);
             this.TbPersonID.Margin = new System.Windows.Forms.Padding(2);
             this.TbPersonID.Name = "TbPersonID";
             this.TbPersonID.Size = new System.Drawing.Size(98, 20);
             this.TbPersonID.TabIndex = 15;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 85);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "PersonID:";
             // 
             // PersonForm
             // 
@@ -175,40 +268,52 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 499);
             this.Controls.Add(this.DgvUserCrud);
+            this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnUpdate);
             this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.TbPhonenumber);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TbEmail);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.Surname);
+            this.Controls.Add(this.TbSurname);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TbName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TbPersonID);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label6);
             this.Name = "PersonForm";
             this.Text = "User";
             ((System.ComponentModel.ISupportInitialize)(this.DgvUserCrud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peopleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView DgvUserCrud;
         private System.Windows.Forms.Button BtnUpdate;
         private System.Windows.Forms.Button BtnAdd;
         private System.Windows.Forms.TextBox TbPhonenumber;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TbEmail;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Surname;
+        private System.Windows.Forms.TextBox TbSurname;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TbName;
         private System.Windows.Forms.Label label2;
+        private DataSet1TableAdapters.PeopleTableAdapter peopleTableAdapter;
+        private DataSet1 DataSet1;
+        private System.Windows.Forms.BindingSource peopleBindingSource;
+        private System.Windows.Forms.Button BtnDelete;
+        private System.Windows.Forms.DataGridView DgvUserCrud;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TbPersonID;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn personIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn statusDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
     }
 }

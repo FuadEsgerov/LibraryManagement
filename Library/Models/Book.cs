@@ -9,7 +9,7 @@ using System.Data.Entity;
 
 namespace Library.Models
 {
-    class Book
+     public class Book
     {
         [Key]
         public int bookID { get; set; }

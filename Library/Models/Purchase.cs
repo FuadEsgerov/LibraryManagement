@@ -8,7 +8,7 @@ using System.Data.Entity;
 
 namespace Library.Models
 {
-    class Purchase
+   public class Purchase
     {
 
         [Key]
