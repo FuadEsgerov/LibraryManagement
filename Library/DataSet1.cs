@@ -6,6 +6,14 @@
     {
     }
 
+
+    public partial class PeopleTableAdapter
+    {
+    }
+}
+
+namespace Library.DataSet1TableAdapters {
+    
     
     public partial class PeopleTableAdapter {
     }

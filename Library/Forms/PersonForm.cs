@@ -30,8 +30,8 @@ namespace Library.Forms
         }
         private void PersonForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'libraryManagement01DataSet.Users' table. You can move, or remove it, as needed.
-            this.peopleTableAdapter.Fill(this.DataSet1.People);
+        
+            this.peopleTableAdapter1.Fill(this.DataSet1.People);
 
         }
         private void BtnAdd_Click(object sender, EventArgs e)
@@ -44,13 +44,16 @@ namespace Library.Forms
                     Name = TbName.Text,
                     Surname = TbSurname.Text,
                     Email = TbEmail.Text,
-                    Phone = TbPhonenumber.Text
+                    Password = TbPassword.Text
                 };
 
             _libraryContext.Person.Add(person);
+
             _libraryContext.SaveChanges();
-               this.peopleTableAdapter.Fill(this.DataSet1.People);
-            }
+
+             this.peopleTableAdapter1.Fill(this.DataSet1.People);
+
+        }
        
 
         private void BtnUpdate_Click(object sender, EventArgs e)
@@ -59,11 +62,11 @@ namespace Library.Forms
             _selectedPerson.Name = TbName.Text;
             _selectedPerson.Surname = TbSurname.Text;
             _selectedPerson.Email = TbEmail.Text;
-            _selectedPerson.Phone = TbPhonenumber.Text;
+            _selectedPerson.Password = TbPassword.Text;
 
             _libraryContext.SaveChanges();
 
-            this.peopleTableAdapter.Fill(this.DataSet1.People);
+            this.peopleTableAdapter1.Fill(this.DataSet1.People);
 
             BtnAdd.Enabled = true;
             BtnDelete.Enabled = false;
@@ -77,7 +80,7 @@ namespace Library.Forms
             _libraryContext.Person.Remove(_selectedPerson);
             _libraryContext.SaveChanges();
 
-            this.peopleTableAdapter.Fill(this.DataSet1.People);
+            this.peopleTableAdapter1.Fill(this.DataSet1.People);
             BtnAdd.Enabled = true;
             BtnDelete.Enabled = false;
             BtnUpdate.Enabled = false;
@@ -98,7 +101,7 @@ namespace Library.Forms
             TbName.Text = _selectedPerson.Name;
             TbSurname.Text = _selectedPerson.Surname;
             TbEmail.Text = _selectedPerson.Email;
-            TbPhonenumber.Text = _selectedPerson.Phone;
+            TbPassword.Text = _selectedPerson.Password;
 
 
 

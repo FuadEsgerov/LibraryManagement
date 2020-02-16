@@ -46,7 +46,6 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BtnPurchView = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnExport = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,11 +60,12 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnOpenPersonCrud = new System.Windows.Forms.Button();
+            this.BtnOpenBookCrud = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvTomorrow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvExel)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvTodaysRetuns)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +79,7 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
-            this.DgvLate.Location = new System.Drawing.Point(130, 67);
+            this.DgvLate.Location = new System.Drawing.Point(26, 65);
             this.DgvLate.Margin = new System.Windows.Forms.Padding(2);
             this.DgvLate.Name = "DgvLate";
             this.DgvLate.RowHeadersWidth = 51;
@@ -127,7 +127,7 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            this.DgvTomorrow.Location = new System.Drawing.Point(130, 67);
+            this.DgvTomorrow.Location = new System.Drawing.Point(26, 65);
             this.DgvTomorrow.Margin = new System.Windows.Forms.Padding(2);
             this.DgvTomorrow.Name = "DgvTomorrow";
             this.DgvTomorrow.RowHeadersWidth = 51;
@@ -173,7 +173,7 @@
             this.Column5,
             this.Boo,
             this.Column8});
-            this.DgvExel.Location = new System.Drawing.Point(389, 288);
+            this.DgvExel.Location = new System.Drawing.Point(284, 299);
             this.DgvExel.Margin = new System.Windows.Forms.Padding(2);
             this.DgvExel.Name = "DgvExel";
             this.DgvExel.RowHeadersWidth = 51;
@@ -202,13 +202,12 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.BtnPurchView);
-            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.BtnExport);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dateTimePickerEnd);
             this.groupBox1.Controls.Add(this.dateTimePickerStart);
-            this.groupBox1.Location = new System.Drawing.Point(130, 288);
+            this.groupBox1.Location = new System.Drawing.Point(26, 286);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -226,15 +225,7 @@
             this.BtnPurchView.TabIndex = 13;
             this.BtnPurchView.Text = "View Purchases";
             this.BtnPurchView.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(91, 212);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 40);
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.BtnPurchView.Click += new System.EventHandler(this.BtnPurchView_Click);
             // 
             // BtnExport
             // 
@@ -245,6 +236,7 @@
             this.BtnExport.TabIndex = 11;
             this.BtnExport.Text = "Export";
             this.BtnExport.UseVisualStyleBackColor = true;
+            this.BtnExport.Click += new System.EventHandler(this.BtnExport_Click);
             // 
             // label1
             // 
@@ -284,7 +276,7 @@
             // 
             // BtnLate
             // 
-            this.BtnLate.Location = new System.Drawing.Point(665, 7);
+            this.BtnLate.Location = new System.Drawing.Point(561, 5);
             this.BtnLate.Margin = new System.Windows.Forms.Padding(2);
             this.BtnLate.Name = "BtnLate";
             this.BtnLate.Size = new System.Drawing.Size(178, 37);
@@ -294,7 +286,7 @@
             // 
             // BtnTomorrow
             // 
-            this.BtnTomorrow.Location = new System.Drawing.Point(397, 7);
+            this.BtnTomorrow.Location = new System.Drawing.Point(293, 5);
             this.BtnTomorrow.Margin = new System.Windows.Forms.Padding(2);
             this.BtnTomorrow.Name = "BtnTomorrow";
             this.BtnTomorrow.Size = new System.Drawing.Size(178, 37);
@@ -304,7 +296,7 @@
             // 
             // BtnTodayR
             // 
-            this.BtnTodayR.Location = new System.Drawing.Point(137, 7);
+            this.BtnTodayR.Location = new System.Drawing.Point(33, 5);
             this.BtnTodayR.Margin = new System.Windows.Forms.Padding(2);
             this.BtnTodayR.Name = "BtnTodayR";
             this.BtnTodayR.Size = new System.Drawing.Size(170, 37);
@@ -322,7 +314,7 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.DgvTodaysRetuns.Location = new System.Drawing.Point(130, 67);
+            this.DgvTodaysRetuns.Location = new System.Drawing.Point(26, 65);
             this.DgvTodaysRetuns.Margin = new System.Windows.Forms.Padding(2);
             this.DgvTodaysRetuns.Name = "DgvTodaysRetuns";
             this.DgvTodaysRetuns.RowHeadersWidth = 51;
@@ -360,11 +352,33 @@
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             // 
+            // BtnOpenPersonCrud
+            // 
+            this.BtnOpenPersonCrud.Location = new System.Drawing.Point(820, 196);
+            this.BtnOpenPersonCrud.Name = "BtnOpenPersonCrud";
+            this.BtnOpenPersonCrud.Size = new System.Drawing.Size(146, 33);
+            this.BtnOpenPersonCrud.TabIndex = 25;
+            this.BtnOpenPersonCrud.Text = "Edit People";
+            this.BtnOpenPersonCrud.UseVisualStyleBackColor = true;
+            this.BtnOpenPersonCrud.Click += new System.EventHandler(this.BtnOpenUser_Click);
+            // 
+            // BtnOpenBookCrud
+            // 
+            this.BtnOpenBookCrud.Location = new System.Drawing.Point(820, 263);
+            this.BtnOpenBookCrud.Name = "BtnOpenBookCrud";
+            this.BtnOpenBookCrud.Size = new System.Drawing.Size(146, 33);
+            this.BtnOpenBookCrud.TabIndex = 26;
+            this.BtnOpenBookCrud.Text = "Edit Books";
+            this.BtnOpenBookCrud.UseVisualStyleBackColor = true;
+            this.BtnOpenBookCrud.Click += new System.EventHandler(this.BtnOpenBookCrud_Click);
+            // 
             // AdminDasboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(990, 590);
+            this.Controls.Add(this.BtnOpenBookCrud);
+            this.Controls.Add(this.BtnOpenPersonCrud);
             this.Controls.Add(this.DgvLate);
             this.Controls.Add(this.DgvTomorrow);
             this.Controls.Add(this.DgvExel);
@@ -381,7 +395,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvExel)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvTodaysRetuns)).EndInit();
             this.ResumeLayout(false);
 
@@ -401,7 +414,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button BtnPurchView;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnExport;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -421,5 +433,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.Button BtnOpenPersonCrud;
+        private System.Windows.Forms.Button BtnOpenBookCrud;
     }
 }

@@ -42,6 +42,9 @@ namespace Library.Forms
             }
         }
 
+       
+       
+
         public float Payment(DateTime returndate, float price)
         {
             DateTime now = new DateTime();

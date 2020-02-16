@@ -38,7 +38,7 @@ namespace Library.Forms
             {
                 int books;
                 books = _libraryContext.Management.Where(m => m.Person.PersonID == item.Person.PersonID && m.returned == false).Count();
-                DgvTodaysRetuns.Rows.Add(item.Person.PersonID, item.Person.Name, item.Person.Surname, item.Person.Phone, books);
+                DgvTodaysRetuns.Rows.Add(item.Person.PersonID, item.Person.Name, item.Person.Surname, item.Person.Password, books);
             }
 
             //Tomorrow
@@ -52,7 +52,7 @@ namespace Library.Forms
             {
                 int books;
                 books = _libraryContext.Management.Where(m => m.Person.PersonID == item.Person.PersonID && m.returned == false).Count();
-                DgvTomorrow.Rows.Add(item.Person.PersonID, item.Person.Name, item.Person.Surname, item.Person.Phone, books);
+                DgvTomorrow.Rows.Add(item.Person.PersonID, item.Person.Name, item.Person.Surname, item.Person.Password, books);
 
 
             }
@@ -160,5 +160,19 @@ namespace Library.Forms
             fs.Close();
         }
 
+        private void BtnOpenUser_Click(object sender, EventArgs e)
+        {
+            PersonForm userForm = new PersonForm();
+            userForm.Show();
+        }
+
+        private void BtnOpenBookCrud_Click(object sender, EventArgs e)
+        {
+            BookForm bookForm = new BookForm();
+            bookForm.Show();
+        }
     }
+
+
+  
 }

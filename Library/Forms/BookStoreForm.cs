@@ -32,7 +32,7 @@ namespace Library.Forms
 
             _selectedPerson = _libraryContext.Person.Find(personID);
 
-            UsernameLabel.Text = _selectedPerson.Name;
+          //  UsernameLabel.Text = _selectedPerson.Name;
 
             _libraryContext = new LibraryContext();
         }
@@ -91,7 +91,7 @@ namespace Library.Forms
                 //Creates management object
                 Management management = new Management
                 {
-                    Person = person,
+                   Person = person,
                     BookReturnDate = dateTimePicker1.Value.Date,
                     Book = book,
                     returned = false
@@ -100,19 +100,14 @@ namespace Library.Forms
                 };
 
                 _libraryContext.Management.Add(management);
+
                 _libraryContext.SaveChanges();
 
             }
             MessageBox.Show("Purchase Completed");
         }
 
-        private void BtnSignOut_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-
-        }
+     
 
         private void BtnReturnBooks_Click(object sender, EventArgs e)
         {

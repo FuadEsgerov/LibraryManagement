@@ -27,11 +27,11 @@ namespace Library.Models
 
         [Required]
         [MaxLength(50)]
-        public string Phone { get; set; }
+        public string Email { get; set; }
 
         [Required]
         [MaxLength(50)]
-        public string Email { get; set; }
+        public string Password { get; set; }
 
 
     }

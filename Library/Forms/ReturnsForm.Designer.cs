@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labelOverallCost = new System.Windows.Forms.Label();
             this.TBOverall = new System.Windows.Forms.TextBox();
             this.TbPrice = new System.Windows.Forms.TextBox();
@@ -39,6 +40,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DgvMyPurchaes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -143,7 +145,12 @@
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             // 
-            // Returns
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 26);
+            // 
+            // ReturnsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -155,7 +162,7 @@
             this.Controls.Add(this.BtnConfirm);
             this.Controls.Add(this.BtnPay);
             this.Controls.Add(this.DgvMyPurchaes);
-            this.Name = "Returns";
+            this.Name = "ReturnsForm";
             this.Text = "Returns";
             ((System.ComponentModel.ISupportInitialize)(this.DgvMyPurchaes)).EndInit();
             this.ResumeLayout(false);
@@ -175,5 +182,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

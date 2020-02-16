@@ -12,14 +12,16 @@ using Library.Forms;
 using Library.Models;
 
 
+
 namespace Library.Forms
 {
     public partial class LoginForm : Form
     {
-        private readonly LibraryContext _context;
+        private readonly LibraryContext _libraryContext;
+        private bool LogedIn = false;
         public LoginForm()
         {
-            _context = new LibraryContext();
+            _libraryContext = new LibraryContext();
             InitializeComponent();
         }
         RegistrationForm frm2 = new RegistrationForm();
@@ -52,36 +54,64 @@ namespace Library.Forms
             }
         }
 
-   
-      
+        public void LoginUser(string username, string password)
+        {
+            List<User> userList = new List<User>();
+            userList = _libraryContext.User.ToList();
+
+            foreach (User user in userList)
+            {
+                //Check if the admin or user exists
+                if (username == user.Username && password == user.Password)
+                {
+                    MessageBox.Show("Welcome Admin");
+                    LogedIn = true;
+
+                    this.Hide();
+
+                    AdminDasboard adminDash = new AdminDasboard();
+                    adminDash.Show();
+
+                    return;
+                }
+            }
+
+
+        }
+
+        public void LoginPerson(string email, string password)
+        {
+            List<Person> personList = new List<Person>();
+            personList = _libraryContext.Person.ToList();
+
+            foreach (Person person in personList)
+            {
+                if (email == person.Email && password == person.Password)
+                {
+                    MessageBox.Show("Welcome " + person.Name);
+                    LogedIn = true;
+
+                    this.Hide();
+
+                    BookStoreForm bookStore = new BookStoreForm(person.PersonID);
+                    bookStore.Show();
+
+                    return;
+                }
+            }
+        }
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            
-                if (string.IsNullOrEmpty(TxtEmail.Text))
-                {
-                    MessageBox.Show("E-poçt yazın");
-                    return;
-                }
 
-                if (string.IsNullOrEmpty(TxtPassword.Text))
-                {
-                    MessageBox.Show("Şifrə yazın");
-                    return;
-                }
-            User user = _context.User.FirstOrDefault(u => u.Status && u.Email == TxtEmail.Text && u.Password == TxtPassword.Text);
-
-            if (user != null)
+            LoginUser(TxtEmail.Text, TxtPassword.Text);
+            LoginPerson(TxtEmail.Text, TxtPassword.Text);
+            //if no one logged in
+            if (!LogedIn)
             {
-                Dashboard dashboard = new Dashboard();
-                dashboard.Show();
-
-
-
-                return;
+                MessageBox.Show("Wrong Username or Password");
             }
-            MessageBox.Show("E-poçt və ya şifrə yalnışdır");
-            }
+        }
 
         private void BtnClose_Click(object sender, EventArgs e)
         {

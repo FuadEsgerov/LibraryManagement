@@ -52,13 +52,14 @@
             // 
             // BtnReturnBooks
             // 
-            this.BtnReturnBooks.Location = new System.Drawing.Point(639, 143);
+            this.BtnReturnBooks.Location = new System.Drawing.Point(650, 93);
             this.BtnReturnBooks.Margin = new System.Windows.Forms.Padding(2);
             this.BtnReturnBooks.Name = "BtnReturnBooks";
             this.BtnReturnBooks.Size = new System.Drawing.Size(91, 47);
             this.BtnReturnBooks.TabIndex = 24;
             this.BtnReturnBooks.Text = "ReturnBooks";
             this.BtnReturnBooks.UseVisualStyleBackColor = true;
+            this.BtnReturnBooks.Click += new System.EventHandler(this.BtnReturnBooks_Click);
             // 
             // DgvCart
             // 
@@ -124,6 +125,7 @@
             this.BtnConfirm.TabIndex = 20;
             this.BtnConfirm.Text = "Confirm";
             this.BtnConfirm.UseVisualStyleBackColor = true;
+            this.BtnConfirm.Click += new System.EventHandler(this.BtnConfirm_Click);
             // 
             // BtnSearch
             // 
@@ -134,6 +136,7 @@
             this.BtnSearch.TabIndex = 19;
             this.BtnSearch.Text = "Search";
             this.BtnSearch.UseVisualStyleBackColor = true;
+            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // returnDateLabel
             // 
@@ -183,6 +186,7 @@
             this.DgvSearchResult.RowTemplate.Height = 24;
             this.DgvSearchResult.Size = new System.Drawing.Size(286, 189);
             this.DgvSearchResult.TabIndex = 15;
+            this.DgvSearchResult.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvSearchResult_RowHeaderMouseDoubleClick);
             // 
             // ID
             // 
@@ -216,7 +220,7 @@
             this.BookSearchBoxTB.Size = new System.Drawing.Size(133, 20);
             this.BookSearchBoxTB.TabIndex = 14;
             // 
-            // BookStore
+            // BookStoreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -231,7 +235,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DgvSearchResult);
             this.Controls.Add(this.BookSearchBoxTB);
-            this.Name = "BookStore";
+            this.Name = "BookStoreForm";
             this.Text = "BookStore";
             ((System.ComponentModel.ISupportInitialize)(this.DgvCart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvSearchResult)).EndInit();

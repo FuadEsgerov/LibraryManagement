@@ -18,21 +18,21 @@ namespace Library.Forms
     public partial class BookForm : Form
     {
         private LibraryContext _libraryContext;
-    private Book _selectedBook;
+        private Book _selectedBook;
         public BookForm()
         {
-          
+            _libraryContext = new LibraryContext();
             InitializeComponent();
             BtnUpdate.Enabled = false;
             BtnDelete.Enabled = false;
             TbBookID.Enabled = false;
 
-            _libraryContext = new LibraryContext();
+            
         }
         private void BookForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'libraryManagement01DataSet.Books' table. You can move, or remove it, as needed.
-            this.booksTableAdapter.Fill(this.DataSet1.Books);
+         this.booksTableAdapter1.Fill(this.DataSet1.Books);
 
         }
 
@@ -48,7 +48,7 @@ namespace Library.Forms
             _libraryContext.Book.Add(newBook);
             _libraryContext.SaveChanges();
 
-            this.booksTableAdapter.Fill(this.DataSet1.Books);
+            this.booksTableAdapter1.Fill(this.DataSet1.Books);
 
 
         }
@@ -63,7 +63,7 @@ namespace Library.Forms
 
             BtnUpdate.Enabled = false;
             BtnDelete.Enabled = false;
-            this.booksTableAdapter.Fill(this.DataSet1.Books);
+            this.booksTableAdapter1.Fill(this.DataSet1.Books);
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace Library.Forms
 
             BtnUpdate.Enabled = false;
             BtnDelete.Enabled = false;
-            this.booksTableAdapter.Fill(this.DataSet1.Books);
+            this.booksTableAdapter1.Fill(this.DataSet1.Books);
         }
 
         private void DgvBookCrud_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)

@@ -41,16 +41,16 @@
             this.BtnUpdate = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.DgvBookCrud = new System.Windows.Forms.DataGridView();
-            this.booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet1 = new Library.DataSet1();
-            this.booksTableAdapter = new Library.DataSet1TableAdapters.BooksTableAdapter();
-            this.BookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.booksTableAdapter1 = new Library.DataSet1TableAdapters.BooksTableAdapter();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bookIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookGenreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvBookCrud)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -66,7 +66,7 @@
             // TbBookID
             // 
             this.TbBookID.Location = new System.Drawing.Point(53, 73);
-            this.TbBookID.Margin = new System.Windows.Forms.Padding(2);
+            this.TbBookID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TbBookID.Name = "TbBookID";
             this.TbBookID.Size = new System.Drawing.Size(135, 20);
             this.TbBookID.TabIndex = 3;
@@ -84,7 +84,7 @@
             // TbBookName
             // 
             this.TbBookName.Location = new System.Drawing.Point(53, 142);
-            this.TbBookName.Margin = new System.Windows.Forms.Padding(2);
+            this.TbBookName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TbBookName.Name = "TbBookName";
             this.TbBookName.Size = new System.Drawing.Size(135, 20);
             this.TbBookName.TabIndex = 3;
@@ -102,7 +102,7 @@
             // TbBookPrice
             // 
             this.TbBookPrice.Location = new System.Drawing.Point(53, 285);
-            this.TbBookPrice.Margin = new System.Windows.Forms.Padding(2);
+            this.TbBookPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TbBookPrice.Name = "TbBookPrice";
             this.TbBookPrice.Size = new System.Drawing.Size(135, 20);
             this.TbBookPrice.TabIndex = 3;
@@ -120,7 +120,7 @@
             // TbBookGenre
             // 
             this.TbBookGenre.Location = new System.Drawing.Point(53, 213);
-            this.TbBookGenre.Margin = new System.Windows.Forms.Padding(2);
+            this.TbBookGenre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TbBookGenre.Name = "TbBookGenre";
             this.TbBookGenre.Size = new System.Drawing.Size(135, 20);
             this.TbBookGenre.TabIndex = 3;
@@ -128,7 +128,7 @@
             // BtnAdd
             // 
             this.BtnAdd.Location = new System.Drawing.Point(53, 334);
-            this.BtnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(141, 31);
             this.BtnAdd.TabIndex = 10;
@@ -139,7 +139,7 @@
             // BtnUpdate
             // 
             this.BtnUpdate.Location = new System.Drawing.Point(53, 392);
-            this.BtnUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(66, 30);
             this.BtnUpdate.TabIndex = 11;
@@ -150,7 +150,7 @@
             // BtnDelete
             // 
             this.BtnDelete.Location = new System.Drawing.Point(123, 392);
-            this.BtnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Size = new System.Drawing.Size(71, 30);
             this.BtnDelete.TabIndex = 12;
@@ -164,13 +164,13 @@
             this.DgvBookCrud.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvBookCrud.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvBookCrud.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.BookID,
-            this.bookName,
-            this.bookGenre,
-            this.bookPrice});
-            this.DgvBookCrud.DataSource = this.booksBindingSource;
+            this.bookIDDataGridViewTextBoxColumn,
+            this.bookNameDataGridViewTextBoxColumn,
+            this.bookGenreDataGridViewTextBoxColumn,
+            this.bookPriceDataGridViewTextBoxColumn});
+            this.DgvBookCrud.DataSource = this.bindingSource1;
             this.DgvBookCrud.Location = new System.Drawing.Point(216, 44);
-            this.DgvBookCrud.Margin = new System.Windows.Forms.Padding(2);
+            this.DgvBookCrud.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DgvBookCrud.Name = "DgvBookCrud";
             this.DgvBookCrud.RowHeadersWidth = 51;
             this.DgvBookCrud.RowTemplate.Height = 24;
@@ -178,39 +178,44 @@
             this.DgvBookCrud.TabIndex = 13;
             this.DgvBookCrud.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvBookCrud_RowHeaderMouseDoubleClick);
             // 
-            // booksBindingSource
-            // 
-            this.booksBindingSource.DataMember = "Books";
-            this.booksBindingSource.DataSource = this.DataSet1;
-            // 
             // DataSet1
             // 
             this.DataSet1.DataSetName = "DataSet1";
             this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // booksTableAdapter
+            // booksTableAdapter1
             // 
-            this.booksTableAdapter.ClearBeforeFill = true;
+            this.booksTableAdapter1.ClearBeforeFill = true;
             // 
-            // BookID
+            // bindingSource1
             // 
-            this.BookID.HeaderText = "bookID";
-            this.BookID.Name = "BookID";
+            this.bindingSource1.DataMember = "Books";
+            this.bindingSource1.DataSource = this.DataSet1;
             // 
-            // bookName
+            // bookIDDataGridViewTextBoxColumn
             // 
-            this.bookName.HeaderText = "bookName";
-            this.bookName.Name = "bookName";
+            this.bookIDDataGridViewTextBoxColumn.DataPropertyName = "bookID";
+            this.bookIDDataGridViewTextBoxColumn.HeaderText = "bookID";
+            this.bookIDDataGridViewTextBoxColumn.Name = "bookIDDataGridViewTextBoxColumn";
+            this.bookIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // bookGenre
+            // bookNameDataGridViewTextBoxColumn
             // 
-            this.bookGenre.HeaderText = "bookGenre";
-            this.bookGenre.Name = "bookGenre";
+            this.bookNameDataGridViewTextBoxColumn.DataPropertyName = "bookName";
+            this.bookNameDataGridViewTextBoxColumn.HeaderText = "bookName";
+            this.bookNameDataGridViewTextBoxColumn.Name = "bookNameDataGridViewTextBoxColumn";
             // 
-            // bookPrice
+            // bookGenreDataGridViewTextBoxColumn
             // 
-            this.bookPrice.HeaderText = "bookPrice";
-            this.bookPrice.Name = "bookPrice";
+            this.bookGenreDataGridViewTextBoxColumn.DataPropertyName = "bookGenre";
+            this.bookGenreDataGridViewTextBoxColumn.HeaderText = "bookGenre";
+            this.bookGenreDataGridViewTextBoxColumn.Name = "bookGenreDataGridViewTextBoxColumn";
+            // 
+            // bookPriceDataGridViewTextBoxColumn
+            // 
+            this.bookPriceDataGridViewTextBoxColumn.DataPropertyName = "bookPrice";
+            this.bookPriceDataGridViewTextBoxColumn.HeaderText = "bookPrice";
+            this.bookPriceDataGridViewTextBoxColumn.Name = "bookPriceDataGridViewTextBoxColumn";
             // 
             // BookForm
             // 
@@ -233,8 +238,8 @@
             this.Text = "Book";
             this.Load += new System.EventHandler(this.BookForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvBookCrud)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,12 +259,12 @@
         private System.Windows.Forms.Button BtnUpdate;
         private System.Windows.Forms.Button BtnDelete;
         private System.Windows.Forms.DataGridView DgvBookCrud;
-        private System.Windows.Forms.BindingSource booksBindingSource;
         private DataSet1 DataSet1;
-        private DataSet1TableAdapters.BooksTableAdapter booksTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookGenre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookPrice;
+        private DataSet1TableAdapters.BooksTableAdapter booksTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookGenreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookPriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }
