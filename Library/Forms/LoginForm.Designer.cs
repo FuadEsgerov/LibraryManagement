@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.ToRegister = new System.Windows.Forms.LinkLabel();
             this.BtnLogin = new System.Windows.Forms.Button();
             this.TxtEmail = new System.Windows.Forms.TextBox();
             this.TxtPassword = new System.Windows.Forms.TextBox();
@@ -45,7 +44,6 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.ToRegister);
             this.panel1.Controls.Add(this.BtnLogin);
             this.panel1.Controls.Add(this.TxtEmail);
             this.panel1.Controls.Add(this.TxtPassword);
@@ -78,21 +76,6 @@
             this.label3.Size = new System.Drawing.Size(88, 28);
             this.label3.TabIndex = 19;
             this.label3.Text = "Password";
-            // 
-            // ToRegister
-            // 
-            this.ToRegister.ActiveLinkColor = System.Drawing.Color.DarkOrange;
-            this.ToRegister.AutoSize = true;
-            this.ToRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ToRegister.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToRegister.LinkColor = System.Drawing.Color.DimGray;
-            this.ToRegister.Location = new System.Drawing.Point(80, 299);
-            this.ToRegister.Name = "ToRegister";
-            this.ToRegister.Size = new System.Drawing.Size(182, 26);
-            this.ToRegister.TabIndex = 18;
-            this.ToRegister.TabStop = true;
-            this.ToRegister.Text = "Don\'t have an account";
-            this.ToRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ToRegister_LinkClicked);
             // 
             // BtnLogin
             // 
@@ -143,6 +126,7 @@
             // 
             this.BtnClose.BackColor = System.Drawing.Color.Transparent;
             this.BtnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnClose.Location = new System.Drawing.Point(663, 12);
@@ -182,7 +166,6 @@
         private System.Windows.Forms.TextBox TxtEmail;
         private System.Windows.Forms.TextBox TxtPassword;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel ToRegister;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnClose;

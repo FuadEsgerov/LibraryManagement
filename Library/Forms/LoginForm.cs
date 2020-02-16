@@ -46,13 +46,7 @@ namespace Library.Forms
             TxtPassword.PasswordChar = '*';
         }
 
-        private void ToRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            using (RegistrationForm regfrm = new RegistrationForm())
-            {
-                regfrm.ShowDialog();
-            }
-        }
+
 
         public void LoginUser(string username, string password)
         {
@@ -62,7 +56,7 @@ namespace Library.Forms
             foreach (User user in userList)
             {
                 //Check if the admin or user exists
-                if (username == user.Username && password == user.Password)
+                if (username == user.Email && password == user.Password)
                 {
                     MessageBox.Show("Welcome Admin");
                     LogedIn = true;

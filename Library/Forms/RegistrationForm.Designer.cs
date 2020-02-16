@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxUsertype = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,10 +42,6 @@
             this.TxtRegUsername = new System.Windows.Forms.TextBox();
             this.TxtRegPassword = new System.Windows.Forms.TextBox();
             this.BtnClose = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBoxUsertype = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +64,54 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(395, 425);
             this.panel1.TabIndex = 1;
+            // 
+            // comboBoxUsertype
+            // 
+            this.comboBoxUsertype.Font = new System.Drawing.Font("Segoe Print", 8.5F);
+            this.comboBoxUsertype.FormattingEnabled = true;
+            this.comboBoxUsertype.Items.AddRange(new object[] {
+            "Moderator",
+            "Admin"});
+            this.comboBoxUsertype.Location = new System.Drawing.Point(143, 252);
+            this.comboBoxUsertype.Name = "comboBoxUsertype";
+            this.comboBoxUsertype.Size = new System.Drawing.Size(167, 27);
+            this.comboBoxUsertype.TabIndex = 24;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(8, 256);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 23);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Select User Type";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(7, 122);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 28);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Username";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(7, 82);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 28);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Fullname";
             // 
             // label1
             // 
@@ -155,6 +203,7 @@
             // 
             this.BtnClose.BackColor = System.Drawing.Color.Transparent;
             this.BtnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnClose.Location = new System.Drawing.Point(663, 12);
@@ -164,54 +213,6 @@
             this.BtnClose.Text = "X";
             this.BtnClose.UseVisualStyleBackColor = false;
             this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(7, 82);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 28);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "Fullname";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(7, 122);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 28);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Username";
-            // 
-            // comboBoxUsertype
-            // 
-            this.comboBoxUsertype.Font = new System.Drawing.Font("Segoe Print", 8.5F);
-            this.comboBoxUsertype.FormattingEnabled = true;
-            this.comboBoxUsertype.Items.AddRange(new object[] {
-            "Moderator",
-            "Admin"});
-            this.comboBoxUsertype.Location = new System.Drawing.Point(143, 252);
-            this.comboBoxUsertype.Name = "comboBoxUsertype";
-            this.comboBoxUsertype.Size = new System.Drawing.Size(167, 27);
-            this.comboBoxUsertype.TabIndex = 24;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(8, 256);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 23);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Select User Type";
             // 
             // RegistrationForm
             // 

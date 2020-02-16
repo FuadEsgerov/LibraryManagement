@@ -41,17 +41,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.DgvUserCrud = new System.Windows.Forms.DataGridView();
+            this.personIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.peopleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet1 = new Library.DataSet1();
             this.label6 = new System.Windows.Forms.Label();
             this.TbPersonID = new System.Windows.Forms.TextBox();
             this.peopleTableAdapter1 = new Library.DataSet1TableAdapters.PeopleTableAdapter();
-            this.personIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUserCrud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peopleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
@@ -60,7 +59,7 @@
             // BtnUpdate
             // 
             this.BtnUpdate.Location = new System.Drawing.Point(59, 421);
-            this.BtnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(78, 37);
             this.BtnUpdate.TabIndex = 25;
@@ -71,7 +70,7 @@
             // BtnAdd
             // 
             this.BtnAdd.Location = new System.Drawing.Point(59, 379);
-            this.BtnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(78, 37);
             this.BtnAdd.TabIndex = 24;
@@ -82,7 +81,7 @@
             // TbPassword
             // 
             this.TbPassword.Location = new System.Drawing.Point(59, 339);
-            this.TbPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TbPassword.Margin = new System.Windows.Forms.Padding(2);
             this.TbPassword.Name = "TbPassword";
             this.TbPassword.Size = new System.Drawing.Size(98, 20);
             this.TbPassword.TabIndex = 23;
@@ -100,7 +99,7 @@
             // TbEmail
             // 
             this.TbEmail.Location = new System.Drawing.Point(59, 278);
-            this.TbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.TbEmail.Name = "TbEmail";
             this.TbEmail.Size = new System.Drawing.Size(98, 20);
             this.TbEmail.TabIndex = 21;
@@ -118,7 +117,7 @@
             // TbSurname
             // 
             this.TbSurname.Location = new System.Drawing.Point(59, 220);
-            this.TbSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TbSurname.Margin = new System.Windows.Forms.Padding(2);
             this.TbSurname.Name = "TbSurname";
             this.TbSurname.Size = new System.Drawing.Size(98, 20);
             this.TbSurname.TabIndex = 19;
@@ -136,7 +135,7 @@
             // TbName
             // 
             this.TbName.Location = new System.Drawing.Point(59, 169);
-            this.TbName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TbName.Margin = new System.Windows.Forms.Padding(2);
             this.TbName.Name = "TbName";
             this.TbName.Size = new System.Drawing.Size(98, 20);
             this.TbName.TabIndex = 17;
@@ -154,7 +153,7 @@
             // BtnDelete
             // 
             this.BtnDelete.Location = new System.Drawing.Point(150, 421);
-            this.BtnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Size = new System.Drawing.Size(78, 37);
             this.BtnDelete.TabIndex = 27;
@@ -173,11 +172,10 @@
             this.statusDataGridViewCheckBoxColumn,
             this.nameDataGridViewTextBoxColumn,
             this.surnameDataGridViewTextBoxColumn,
-            this.phoneDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn});
             this.DgvUserCrud.DataSource = this.peopleBindingSource;
             this.DgvUserCrud.Location = new System.Drawing.Point(273, 85);
-            this.DgvUserCrud.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DgvUserCrud.Margin = new System.Windows.Forms.Padding(2);
             this.DgvUserCrud.Name = "DgvUserCrud";
             this.DgvUserCrud.ReadOnly = true;
             this.DgvUserCrud.RowHeadersWidth = 51;
@@ -185,38 +183,6 @@
             this.DgvUserCrud.Size = new System.Drawing.Size(560, 373);
             this.DgvUserCrud.TabIndex = 28;
             this.DgvUserCrud.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvUserCrud_RowHeaderMouseDoubleClick);
-            // 
-            // peopleBindingSource
-            // 
-            this.peopleBindingSource.DataMember = "People";
-            this.peopleBindingSource.DataSource = this.DataSet1;
-            // 
-            // DataSet1
-            // 
-            this.DataSet1.DataSetName = "DataSet1";
-            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(56, 85);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "PersonID:";
-            // 
-            // TbPersonID
-            // 
-            this.TbPersonID.Location = new System.Drawing.Point(59, 112);
-            this.TbPersonID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.TbPersonID.Name = "TbPersonID";
-            this.TbPersonID.Size = new System.Drawing.Size(98, 20);
-            this.TbPersonID.TabIndex = 15;
-            // 
-            // peopleTableAdapter1
-            // 
-            this.peopleTableAdapter1.ClearBeforeFill = true;
             // 
             // personIDDataGridViewTextBoxColumn
             // 
@@ -247,19 +213,44 @@
             this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
             this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // phoneDataGridViewTextBoxColumn
-            // 
-            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
-            this.phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
-            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
-            this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
             this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // peopleBindingSource
+            // 
+            this.peopleBindingSource.DataMember = "People";
+            this.peopleBindingSource.DataSource = this.DataSet1;
+            // 
+            // DataSet1
+            // 
+            this.DataSet1.DataSetName = "DataSet1";
+            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(56, 85);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "PersonID:";
+            // 
+            // TbPersonID
+            // 
+            this.TbPersonID.Location = new System.Drawing.Point(59, 112);
+            this.TbPersonID.Margin = new System.Windows.Forms.Padding(2);
+            this.TbPersonID.Name = "TbPersonID";
+            this.TbPersonID.Size = new System.Drawing.Size(98, 20);
+            this.TbPersonID.TabIndex = 15;
+            // 
+            // peopleTableAdapter1
+            // 
+            this.peopleTableAdapter1.ClearBeforeFill = true;
             // 
             // PersonForm
             // 
@@ -280,8 +271,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TbPersonID);
             this.Controls.Add(this.label6);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "PersonForm";
-            this.Text = "User";
+            this.Text = "Person";
             ((System.ComponentModel.ISupportInitialize)(this.DgvUserCrud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peopleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();

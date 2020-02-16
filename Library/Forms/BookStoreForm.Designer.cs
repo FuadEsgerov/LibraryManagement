@@ -52,7 +52,7 @@
             // 
             // BtnReturnBooks
             // 
-            this.BtnReturnBooks.Location = new System.Drawing.Point(650, 93);
+            this.BtnReturnBooks.Location = new System.Drawing.Point(693, 88);
             this.BtnReturnBooks.Margin = new System.Windows.Forms.Padding(2);
             this.BtnReturnBooks.Name = "BtnReturnBooks";
             this.BtnReturnBooks.Size = new System.Drawing.Size(91, 47);
@@ -235,6 +235,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DgvSearchResult);
             this.Controls.Add(this.BookSearchBoxTB);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "BookStoreForm";
             this.Text = "BookStore";
             ((System.ComponentModel.ISupportInitialize)(this.DgvCart)).EndInit();
